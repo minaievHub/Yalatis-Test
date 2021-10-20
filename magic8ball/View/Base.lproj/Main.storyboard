@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="giv-57-PJM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="oa1-Yq-XoI">
+            <objects>
+                <navigationController id="giv-57-PJM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L6u-Rf-QyL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="upk-Ee-6pM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FmT-5o-AqW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-533" y="117"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="magic8ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your question" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MGJ-zk-FJL">
+                                <rect key="frame" x="43" y="456.5" width="328" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="328" id="bau-Mn-WjN"/>
+                                    <constraint firstAttribute="height" constant="34" id="uns-hX-7Y7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eR5-vo-31x">
+                                <rect key="frame" x="114.5" y="368" width="185" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="185" id="bd6-vs-Bp9"/>
+                                    <constraint firstAttribute="height" constant="46" id="zVk-QP-Ped"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="39"/>
+                                <color key="textColor" red="1" green="0.1484035437" blue="0.00090441950670000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.70448993967848461" green="0.8161713579266342" blue="0.73213171021859347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eR5-vo-31x" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3GE-RD-0mq"/>
+                            <constraint firstItem="eR5-vo-31x" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="280" id="CGe-my-fQH"/>
+                            <constraint firstItem="MGJ-zk-FJL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sQO-Pm-vbY"/>
+                            <constraint firstItem="MGJ-zk-FJL" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-1.5" id="x4z-kt-Iv7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6YG-Xn-VSK">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="rlf-Py-QMk">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aji-dM-ax3">
+                                <rect key="frame" x="301" y="11" width="93" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Settings" image="gearshape.2.fill" catalog="system">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="oUn-qi-MVG" kind="show" id="Z6e-Qg-d31"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="getAnswer" destination="MGJ-zk-FJL" id="VjK-4f-wAu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182.60869565217394" y="116.51785714285714"/>
+        </scene>
+        <!--SettingsVC-->
+        <scene sceneID="LFD-Wl-YCx">
+            <objects>
+                <viewController id="oUn-qi-MVG" customClass="SettingsVC" customModule="magic8ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qiy-jO-6iZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="oBc-6Z-9Do">
+                                <rect key="frame" x="75" y="431" width="264" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hOg-Su-p3K">
+                                        <rect key="frame" x="0.0" y="0.0" width="264" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="264" id="EV1-4z-3wb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bj5-aF-3mf">
+                                <rect key="frame" x="151" y="496" width="102" height="30"/>
+                                <color key="backgroundColor" red="0.88602545715365244" green="1" blue="0.73538634162326877" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Add answer">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="appendArray:" destination="oUn-qi-MVG" eventType="touchUpInside" id="ziv-LL-2cM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0D-MH-MAb">
+                                <rect key="frame" x="49" y="268" width="307" height="36"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="31"/>
+                                <color key="textColor" red="0.13593663408412993" green="0.15275142915852311" blue="0.75535599226804129" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fbo-U2-Dxa"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.88227287133378263" blue="0.72050193706084198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bj5-aF-3mf" firstAttribute="centerX" secondItem="oBc-6Z-9Do" secondAttribute="centerX" constant="-5" id="02U-jr-GNR"/>
+                            <constraint firstItem="D0D-MH-MAb" firstAttribute="leading" secondItem="Fbo-U2-Dxa" secondAttribute="leading" constant="49" id="2Jb-E4-7ke"/>
+                            <constraint firstItem="bj5-aF-3mf" firstAttribute="leading" secondItem="Fbo-U2-Dxa" secondAttribute="leading" constant="151" id="Auq-BZ-q19"/>
+                            <constraint firstItem="bj5-aF-3mf" firstAttribute="centerX" secondItem="Fbo-U2-Dxa" secondAttribute="centerX" constant="-5" id="Jhv-Zu-Ba0"/>
+                            <constraint firstItem="oBc-6Z-9Do" firstAttribute="centerX" secondItem="Qiy-jO-6iZ" secondAttribute="centerX" id="Phu-IO-f3g"/>
+                            <constraint firstItem="D0D-MH-MAb" firstAttribute="centerX" secondItem="Fbo-U2-Dxa" secondAttribute="centerX" constant="-4.5" id="dVK-61-7Qa"/>
+                            <constraint firstItem="D0D-MH-MAb" firstAttribute="top" secondItem="Fbo-U2-Dxa" secondAttribute="top" constant="180" id="lMr-Rx-avQ"/>
+                            <constraint firstItem="oBc-6Z-9Do" firstAttribute="centerY" secondItem="Qiy-jO-6iZ" secondAttribute="centerY" id="oqp-Vr-7Cn"/>
+                            <constraint firstItem="bj5-aF-3mf" firstAttribute="top" secondItem="oBc-6Z-9Do" secondAttribute="bottom" constant="31" id="vzf-ic-db3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yir-wJ-MP2"/>
+                    <connections>
+                        <outlet property="addAnswer" destination="hOg-Su-p3K" id="oku-mJ-eIY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PS6-Wk-hMG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="115.14084507042254"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gearshape.2.fill" catalog="system" width="128" height="100"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
